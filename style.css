@@ -32,3 +32,8 @@ button {
   border-radius: 10px;
   box-shadow: inset;
 }
+
+.options {
+  display: flex;
+  gap: 15px;
+}

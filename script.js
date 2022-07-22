@@ -1,8 +1,9 @@
 "use strict";
 
 const container = document.querySelector(".container");
-const button = document.querySelector("button");
+const changeGrid = document.querySelector(".setsize");
 const squares = [];
+const rainbow = document.querySelector(".rainbow");
 
 for (let i = 0; i < 256; i++) {
   const newSquare = document.createElement("div");
@@ -11,17 +12,18 @@ for (let i = 0; i < 256; i++) {
   squares.push(newSquare);
 }
 
-function addListeners(squares) {
+function addListeners(squares, mode = "black") {
   for (const square of squares) {
-    square.addEventListener("mouseover", (e) =>
-      e.target.classList.add("hovered")
+    square.addEventListener(
+      "mouseover",
+      (e) => (e.target.style.backgroundColor = mode)
     );
   }
 }
 
 addListeners(squares);
 
-button.addEventListener("click", newGrid);
+changeGrid.addEventListener("click", newGrid);
 
 function newGrid() {
   const dim = prompt("How many squares per side do you want the grid to have?");
@@ -46,3 +48,11 @@ function newGrid() {
   }
   addListeners(squares);
 }
+
+// rainbow.addEventListener('click',
+//   changeColor
+// )
+
+// function changeColor(color){
+
+// }
