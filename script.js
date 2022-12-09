@@ -5,7 +5,7 @@ const squares = []; //array to keep track of all the squares
 
 for (let i = 0; i < 256; i++) {
   const newSquare = document.createElement("span");
-  newSquare.classList.add("grid");
+  newSquare.classList.add("pixel");
   grid.appendChild(newSquare);
   squares.push(newSquare);
 } //populates the grid with squares
@@ -38,7 +38,7 @@ function newGrid() {
 
   for (let i = 0; i < dim ** 2; i++) {
     const newSquare = document.createElement("div");
-    newSquare.classList.add("grid");
+    newSquare.classList.add("pixel");
     grid.appendChild(newSquare);
     squares.push(newSquare); //sets up new squares
 

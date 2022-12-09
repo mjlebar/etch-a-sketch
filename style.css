@@ -5,16 +5,19 @@
   height: 576px;
   width: 576px;
 }
+/* nicely sets up the container for our "pixels" */
 
-.grid {
+.pixel {
   height: 34px;
   width: 34px;
   border: 1px solid black;
 }
+/* formats the pixels of the grid */
 
 .hovered {
   background-color: black;
 }
+/* a class to add when we hover over a pixel that turns it black */
 
 body {
   display: flex;
@@ -23,6 +26,7 @@ body {
   align-items: center;
   gap: 24px;
 }
+/* aligns all the content on the page */
 
 button {
   font-size: large;
@@ -30,10 +34,5 @@ button {
   padding: 10px;
   border-color: blueviolet;
   border-radius: 10px;
-  box-shadow: inset;
 }
-
-.options {
-  display: flex;
-  gap: 15px;
-}
+/* formats our buttons and makes them look nice */
